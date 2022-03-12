@@ -6,9 +6,9 @@ def tests():
 
     triangle = Triangle(points)
 
-    assert triangle.lengths == [3, 4, 5]
+    assert triangle.lengths == [3.0, 5.0, 4.0]
 
-    assert triangle.angles == [37, 53, 90]
+    assert triangle.angles == [37, 90, 53]
 
     assert triangle.type == "Right angle Scalene"
 
@@ -16,13 +16,11 @@ def tests():
 
 
 def debug():
-    points = ["-4", "-2", "-8", "7", "-8", "-7"]
+    points = ["0", "0", "3", "0", "0", "4"]
 
     triangle = Triangle(points)
 
-    print(triangle.angles)
+    print(triangle.lengths)
 
 
-debug()
-# tests()
-
+tests()
