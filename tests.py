@@ -15,5 +15,14 @@ def tests():
     assert triangle.area == 6
 
 
-tests()
+def debug():
+    points = ["-4", "-2", "-8", "7", "-8", "-7"]
+
+    triangle = Triangle(points)
+
+    print(triangle.angles)
+
+
+debug()
+# tests()
 

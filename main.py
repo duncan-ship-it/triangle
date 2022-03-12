@@ -10,9 +10,7 @@ class Triangle:
         # organise list of points into 3 tuples of (x, y) float coordinates
         self.points = self.p1, self.p2, self.p3 = [tuple(map(float, points[i*2:i*2+2])) for i in range(3)]
 
-        self.lengths = [dist(self.p1, self.p2),
-                        dist(self.p1, self.p3),
-                        dist(self.p2, self.p3)]
+        self.lengths = [dist(self.points[i], self.points[(i+1) % 3]) for i in range(3)]
 
         self.angles = [self.get_angle(i) for i in range(3)]
 
